@@ -154,15 +154,16 @@
     max-width: 10rem;
     line-height: 1.5rem;
 }
+.con:hover{
+    color: aqua;
+    transition-duration: 1s;
+}
 .contact{
     height: 200px;
     width: 700px;
-    border: 2px solid white;
     position: relative;
     margin-top: 3rem;
     left: 9rem;
-    border-radius: 20px;
-    
 }
 .quote{
     height: 13rem;
@@ -187,18 +188,30 @@
 }
 .bo1, .bo2, .bo3{
     height: 60px;
-    width: 100%;
-    border: 2px solid white;
+    width: 70%;
     position: relative;
     left: 4px;
     top: 4px;
 }
+.bo3:hover{
+    color: aqua;
+    transition-duration: 1s;
+}
+.bo2:hover{
+    color: aqua;
+    transition-duration: 1s;
+}
+.bo1:hover{
+    color: aqua;
+    transition-duration: 1s;
+}
 .bo1{
-    font-size: xx-large;
+    font-size: x-large;
+    
 }
 .bo2{
-    font-size: xx-large;
+    font-size: x-large;
 }
-.bo3{
-    font-size: xx-large;
+.bo3 {
+    font-size: x-large;
 }
