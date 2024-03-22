@@ -30,7 +30,6 @@ a{
     text-transform: uppercase;
     font-size: 1rem;
     color: #fff;
-   
 }
 .left-container, .right-container{
     display: flex;
@@ -106,14 +105,17 @@ a{
 .b1:hover{
     background: transparent;
     color: #5DB9EE;
+    transform: rotate(360deg) ;
 }
 .b2:hover{
     background-color: #5DB9EE;
     color: black;
+    transform: rotate(360deg) ;
 }
 .b3:hover{
     background: transparent;
     color: #5DB9EE;
+    transform: rotate(360deg) ;
 }
 .icons .fa-brands:hover{
     cursor: pointer;
