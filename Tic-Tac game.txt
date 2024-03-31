@@ -1,0 +1,234 @@
+package Project1;
+import java.util.Scanner;
+ class tic_tock{
+	String arry[][]= {
+			{"1","2","3"},
+			{"4","5","6"},
+			{"7","8","9"}
+	};
+	public void display() {
+		System.out.println(arry[0][0]+"|"+arry[0][1]+"|"+arry[0][2]+"\n"+
+	arry[1][0]+"|"+arry[1][1]+"|"+arry[1][2]+"\n"
+				+arry[2][0]+"|"+arry[2][1]+"|"+arry[2][2]);
+	}
+	public void Input_player1() {
+		Scanner s=new Scanner(System.in);
+		System.out.println(" enter your position ");
+		int position=s.nextInt();
+		switch(position) {
+		case 1:
+			if(arry[0][0]=="x" || arry[0][0]=="o") {
+				System.out.println(" this position is allready filled");
+				Input_player1();
+			}else {
+				arry[0][0]="x";
+				break;
+			}
+		case 2:
+			if(arry[0][1]=="x"|| arry[0][1]=="o") {
+				System.out.println("this position is allready filled ");
+				Input_player1();
+			}
+			else {
+				arry[0][1]="x";
+			}
+		case 3:
+			if(arry[0][2]=="x"|| arry[0][2]=="o") {
+				System.out.println(" this position is allready filled");
+				Input_player1();
+			}else {
+				arry[0][2]="x";
+				break;
+			}
+		case 4:
+			if(arry[1][0]=="x"|| arry[1][0]=="o") {
+				System.out.println(" this position is allready filled");
+				Input_player1();
+			}else {
+				arry[1][0]="x";
+				break;
+			}
+		case 5:
+			if(arry[1][1]=="x"|| arry[1][1]=="o") {
+				System.out.println(" this position is allready filled");
+			Input_player1();
+			}else {
+				arry[1][1]="x";
+			break;
+			}
+		case 6:
+			if(arry[1][2]=="x"|| arry[1][2]=="o") {
+				System.out.println("this position is allready filled");
+			Input_player1();
+			}else {
+				arry[1][2]="x";
+			break;
+			}
+		case 7:
+			if(arry[2][0]=="x"|| arry[2][0]=="o") {
+				System.out.println("this position is allready filled");
+			Input_player1();
+			}else {
+				arry[2][0]="x";
+			break;
+			}
+		case 8:
+			if(arry[2][1]=="x"|| arry[2][1]=="o") {
+				System.out.println("this position is allready filled");
+			Input_player1();
+			}else {
+				arry[2][1]="x";
+			break;
+			}
+		case 9:
+			if(arry[2][2]=="x"|| arry[2][2]=="o") {
+				System.out.println("this position is allready filled");
+			Input_player1();
+			}else {
+				arry[2][2]="x";
+			break;
+			}
+		}
+		display();
+	}
+	public void Input_player2() {
+		Scanner sr=new Scanner(System.in);
+		System.out.println(" enter your position");
+		int position=sr.nextInt();
+		switch(position) {
+		case 1:
+			if(arry[0][0]=="x"|| arry[0][0]=="o") {
+				System.out.println("this position is allready filled");
+			Input_player2();
+			}else {
+				arry[0][0]="o";
+			break;
+			}
+		case 2:
+			if(arry[0][1]=="x"|| arry[0][1]=="o") {
+				System.out.println("this position is allready filled");
+			Input_player2();
+			}else {
+				arry[0][1]="o";
+			break;
+			}
+		case 3:
+			if(arry[0][2]=="x"|| arry[0][2]=="o") {
+				System.out.println("this position is allready filled");
+			Input_player2();
+			}else {
+				arry[0][2]="o";
+			break;
+			}
+		case 4:
+				if(arry[1][0]=="x"|| arry[1][0]=="o") {
+					System.out.println("this position is allready filled");
+				Input_player2();
+				}else {
+					arry[1][0]="o";
+				break;
+				}
+		case 5:
+			if(arry[1][1]=="x"|| arry[1][1]=="o") {
+				System.out.println("this position is allready filled");
+			Input_player2();
+			}else {
+				arry[1][1]="o";
+			break;
+			}
+		case 6:
+			if(arry[1][2]=="x"|| arry[1][2]=="o") {
+				System.out.println("this position is allready filled");
+			Input_player2();
+			}else {
+				arry[1][2]="o";
+			break;
+			}
+		case 7:
+			if(arry[2][0]=="x"|| arry[2][0]=="o") {
+				System.out.println("this position is allready filled");
+			Input_player2();
+			}else {
+				arry[2][0]="0";
+			break;
+			}
+		case 8:
+			if(arry[2][1]=="x"|| arry[2][1]=="o") {
+				System.out.println("this position is allready filled");
+			Input_player2();
+			}else {
+				arry[2][1]="o";
+			break;
+			}
+		case 9:
+			if(arry[2][2]=="x"|| arry[2][2]=="o") {
+				System.out.println("this position is allready filled");
+			Input_player2();
+			}else {
+				arry[2][2]="o";
+			break;
+			}
+		}
+		display();
+		
+	}
+	public void check() {
+		if((arry[0][0]=="x"&&arry[1][1]=="x")&&(arry[1][1]=="x"&&arry[2][2]=="x")
+				||(arry[0][2]=="x"&&arry[1][1]=="x")&&(arry[1][1]=="x"&&arry[2][0]=="x")
+				||(arry[0][0]=="x"&&arry[0][1]=="x")&&(arry[0][1]=="x"&&arry[0][2]=="x")
+				||(arry[1][0]=="x"&&arry[1][1]=="x")&&(arry[1][1]=="x"&&arry[1][2]=="x")
+				||(arry[2][0]=="x"&&arry[2][1]=="x")&&(arry[2][1]=="x"&&arry[2][2]=="x")
+				||(arry[0][0]=="x"&&arry[0][1]=="x")&&(arry[0][1]=="x"&&arry[0][2]=="x")
+				||(arry[0][0]=="x"&&arry[1][0]=="x")&&(arry[1][0]=="x"&&arry[2][0]=="x")
+				||(arry[0][1]=="x"&&arry[1][1]=="x")&&(arry[1][1]=="x"&&arry[2][1]=="x")
+				||(arry[0][2]=="x"&&arry[1][2]=="x")&&(arry[1][2]=="x"&&arry[2][2]=="x"))
+				{
+			System.err.println( " congratulations x is won!!!!!");
+			System.exit(0);
+				}
+		 if((arry[0][0]=="o"&&arry[1][1]=="o")&&(arry[1][1]=="o"&&arry[2][2]=="o")
+				||(arry[0][2]=="o"&&arry[1][1]=="o")&&(arry[1][1]=="o"&&arry[2][0]=="o")
+				||(arry[0][0]=="o"&&arry[0][1]=="0")&&(arry[0][1]=="o"&&arry[0][2]=="o")
+				||(arry[1][0]=="o"&&arry[1][1]=="o")&&(arry[1][1]=="o"&&arry[1][2]=="o")
+				||(arry[2][0]=="o"&&arry[2][1]=="o")&&(arry[2][1]=="o"&&arry[2][2]=="o")
+				||(arry[0][0]=="o"&&arry[0][1]=="o")&&(arry[0][1]=="o"&&arry[0][2]=="o")
+				||(arry[0][0]=="o"&&arry[1][0]=="o")&&(arry[1][0]=="o"&&arry[2][0]=="o")
+				||(arry[0][1]=="o"&&arry[1][1]=="o")&&(arry[1][1]=="o"&&arry[2][1]=="o")
+				||(arry[0][2]=="o"&&arry[1][2]=="o")&&(arry[1][2]=="o"&&arry[2][2]=="o"))
+		{
+			System.err.println("congratulations o is won !!!!!");
+			System.exit(0);
+		}
+		 
+				
+		
+		}
+	
+		
+}
+ 
+public class My_game {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+  tic_tock y=new tic_tock();
+  y.display();
+  System.out.println(" enter first player name");
+  String name1=sc.next();
+  System.out.println("enter second player name");
+  String name2=sc.next();
+  System.out.println(name1  +" is x \n"+ name2  +" is o\n");
+  while(true) {
+	  System.out.println(name1 +" your turn");
+	  		y.Input_player1();
+	  		y.check();
+	  		System.out.println(name2 +" your turn");
+	  		y.Input_player2();
+	  		y.check();
+  }
+       
+	}
+
+
+	}
+
